@@ -8,3 +8,4 @@ if __name__ == '__main__':
     create_profile("sam")
     create_profile("Martin", "Luther", "King", "Jr.", born=1929, died=1996)
     create_profile("James", "bond", cofounder="007")
+    create_profile("test")
