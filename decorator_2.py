@@ -1,7 +1,7 @@
 def add_four(func):
     def wrapper_func(*args, **kwargs):
         print("Adding 4")
-        result = func(*args, **kwargs)
+        result = func((args, kwargs))
         return result + 4
 
     return wrapper_func
@@ -10,18 +10,17 @@ def add_four(func):
 def double(func):
     def wrapper_func(*args, **kwargs):
         print("Double the result ")
-        result = func(*args, **kwargs)
+        result = func((args, kwargs))
         return result * 2
 
     return wrapper_func()
 
 
 @double
-@add_four
+# add_four
 def add(a, b):
     print(f"we are adding {a} and {b}")
-    return a + b
+    print(a + b)
 
 
-print(add(1, 3))
-print(add(3, 5))
+add(9, 7)
