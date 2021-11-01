@@ -9,7 +9,6 @@ print(queries)
 print(queries[::2])
 
 normalized = [query.strip().lower() for query in queries[::2]]
-
 print(normalized)
 
 # Write
