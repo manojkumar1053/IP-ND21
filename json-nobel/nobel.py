@@ -27,6 +27,8 @@ def main(year, category):
             print(f"{firstname} {surname}: {laureate['motivation']}")
 
 
+
+
 if __name__ == '__main__':
     parser = helper.build_parser()
     args = parser.parse_args()
