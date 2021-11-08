@@ -22,3 +22,11 @@ with MyContext() as t:
 with MyContext(33) as t:
     x = t / 0
     print(x)
+
+with MyContext() as t:
+    x = t/7
+    print(x)
+
+with MyContext(21) as t:
+    x = t/7
+    print(x)
