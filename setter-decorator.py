@@ -16,7 +16,11 @@ class House:
 home = House(999)
 
 #print(home.price())
-
+print(home.size)
 print(home.price)
+
+home.price = 99
+
+print(home.size)
 
 
