@@ -20,7 +20,7 @@ print(home.size)
 print(home.price)
 
 home.price = 99
-
+# Using setter decorator to set the price
 print(home.size)
 
 
