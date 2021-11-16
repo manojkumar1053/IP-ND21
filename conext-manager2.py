@@ -12,7 +12,7 @@ def my_context(val=42):
     finally:
         print("Exiting context")
 
-
+# G
 with my_context() as t:
     print("The answer is", t)
 
