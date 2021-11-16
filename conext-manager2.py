@@ -19,3 +19,7 @@ with my_context() as t:
 with my_context(33) as t:
     x = t / 0
     print(x)
+
+with my_context(33) as t:
+    x = t / 0.0
+    print(x)
