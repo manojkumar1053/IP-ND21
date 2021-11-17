@@ -11,6 +11,14 @@ class MagicShoppingCart:
     def __contains__(self, item):
         return item.lower() in self.items
 
+    def __iadd__(self, other):
+        for item, count in other.items.items():
+            if item in self.items:
+                self.items[item] += count
+            else:
+                self.items[item] = count
+        return self
+
 
 cart = MagicShoppingCart({
     "Apples".lower(): 20,
@@ -18,6 +26,18 @@ cart = MagicShoppingCart({
     "oranges".lower(): 17
 })
 
+cart2 = MagicShoppingCart({
+    "Apples".lower(): 1,
+    "bananas".lower(): 1,
+    "oranges".lower(): 1
+})
+print(len(cart))
+print(cart)
+print("Apples" in cart)
+print("grapes" in cart)
+
+cart += cart2
+print(cart)
 print(len(cart))
 print(cart)
 print("Apples" in cart)
