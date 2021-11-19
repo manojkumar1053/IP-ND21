@@ -26,9 +26,11 @@ class Car(MotarVehicle):
 
 
 mv = MotarVehicle(999)
+
 print(mv)
 mv.travel(400)
 print(mv)
 
+print(mv.travel(10000))
 c = Car(500, 4, 'Blue')
 print(c.range, c.tank, c.wheels, c.color)
