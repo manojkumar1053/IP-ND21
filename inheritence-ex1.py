@@ -25,6 +25,7 @@ class Car(MotarVehicle):
         self.color = color
 
 
+# Creating Class
 mv = MotarVehicle(999)
 
 print(mv)
