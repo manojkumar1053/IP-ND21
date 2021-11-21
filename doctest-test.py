@@ -11,4 +11,4 @@ class Simulator:
 if __name__ == "__main__":
     import doctest
 
-    doctest.testmod(extraglobs={sim: Simulator(43, 935, 3)})
+    doctest.testmod(extraglobs={Simulator: Simulator(43, 935, 3)})
