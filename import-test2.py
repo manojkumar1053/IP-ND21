@@ -1,4 +1,4 @@
-import random
+import random  # Fully Qualified Name for module
 
 print(random.randint(0,1100))
 
