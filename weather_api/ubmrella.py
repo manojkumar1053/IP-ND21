@@ -5,4 +5,4 @@ class WeatherService:
         pass
 
 if __name__ == "__main__":
-    print(WeatherService.getForecast())
+    print(WeatherService.getForecast("Raleigh","us"))
