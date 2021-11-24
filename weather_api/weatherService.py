@@ -16,8 +16,10 @@ class WeatherService:
         ])
 
         data = response.json()
-
-        return data['list']
+        if data:
+            return data['list']
+        else:
+            return None
 
 
 if __name__ == "__main__":
