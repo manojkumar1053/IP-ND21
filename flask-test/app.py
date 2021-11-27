@@ -1,21 +1,16 @@
-from flask import Flask
-
+from flask import Flask, request
+from umbrella import makeUmbrellaDecision
 app = Flask(__name__)
-
 
 @app.route('/')
 def home():
-    return 'yo'
-
-
-@app.route('/')
-def candy():
-    return 'chocolate'
-
-
-@app.route('/')
-def greeting():
-    return 'hello!'
+    city = request.args.get('city')
+    if city is None:
+        city = 'new york'
+    if makeUmbrellaDecision(city, 'us'):
+        return 'Bring an umbrella'
+    else:
+        return 'No need for an umbrella'
 
 # Running Test Server on Window CMD
 # export FLASK_APP=app.py
